@@ -8,8 +8,13 @@ const EightBall = () => {
     const answer = getRandAnswer(answers)
 
     const handleClick = () => {
-        setMsg(answer[0])
-        setColor(answer[1])
+        if (color === "black" && msg === "Think of a Question") {
+            setMsg(answer[0])
+            setColor(answer[1])
+        } else {
+            setMsg("Think of a Question")
+            setColor("black")
+        }
     }
 
     console.log(color, msg)
